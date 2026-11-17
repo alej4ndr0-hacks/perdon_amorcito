@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti, mi amor 💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fondo animado: corazones y patitas flotando (los crea script.js) -->
+  <div id="fondo" aria-hidden="true"></div>
+
+  <main class="escenario">
+    <!-- Barra de progreso con patitas -->
+    <div class="progreso" id="progreso" aria-hidden="true"></div>
+
+    <!-- Aquí script.js dibuja cada página -->
+    <section class="tarjeta" id="tarjeta">
+      <div class="gif-marco" id="gifMarco">
+        <img id="gif" alt="gatito" draggable="false">
+        <div class="gif-emoji" id="gifEmoji"></div>
+        <div class="gif-cargando" id="gifCargando">🐾</div>
+      </div>
+
+      <h1 class="titulo" id="titulo"></h1>
+      <p class="subtitulo" id="subtitulo"></p>
+
+      <!-- Botones Sí / No (solo en la página de la pregunta) -->
+      <div class="respuestas" id="respuestas">
+        <button class="btn-si" id="btnSi">Sí 💖</button>
+        <button class="btn-no" id="btnNo">No 😿</button>
+      </div>
+    </section>
+
+    <!-- Navegación con patitas de gato -->
+    <nav class="navegacion">
+      <button class="patita patita-mini" id="btnAtras" aria-label="Página anterior">
+        <span class="dedo d1"></span><span class="dedo d2"></span>
+        <span class="dedo d3"></span><span class="dedo d4"></span>
+        <span class="almohadilla">‹</span>
+      </button>
+
+      <button class="patita" id="btnSiguiente" aria-label="Siguiente página">
+        <span class="dedo d1"></span><span class="dedo d2"></span>
+        <span class="dedo d3"></span><span class="dedo d4"></span>
+        <span class="almohadilla" id="textoPatita">Ábreme</span>
+      </button>
+    </nav>
+
+    <p class="pista" id="pista">toca la patita 🐾</p>
+  </main>
+
+  <!-- Música de fondo: pon tu canción en la misma carpeta con el nombre musica.mp3 -->
+  <audio id="musica" src="musica.mp3" loop preload="auto"></audio>
+  <button class="btn-musica" id="btnMusica" aria-label="Música">🎵</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
